@@ -1,0 +1,35 @@
+server:
+  port: 8201
+
+spring:
+  profiles: dev
+  application:
+    name: config-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: sytservicecloud-dept8001
+    prefer-ip-address: true #访问路径可以显示ip地址
+
+---
+
+server:
+  port: 8202
+
+spring:
+  profiles: test
+  application:
+    name: config-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: sytservicecloud-dept8001
+    prefer-ip-address: true #访问路径可以显示ip地址
+
+
